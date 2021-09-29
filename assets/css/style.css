@@ -1,0 +1,38 @@
+.card {
+  min-height: 450px;
+  max-height: 450px;
+}
+
+.bio {
+  font-family: "Italianno", cursive;
+  font-size: 1.7rem;
+}
+
+.bio-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.intro-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.profile {
+  color: #ff149375!important;
+}
+
+.social-media-icon {
+  width: 30px;
+  height: 30px;
+}
