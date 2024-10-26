@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/butterfly.png" type="image/x-icon" />
+    <title>Mis Quince</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card-container">
+      <img
+        src="./assets/images/invitation.jpg"
+        alt="Tarjeta"
+        class="card-image"
+        id="tarjeta"
+      />
+    </div>
+
+    <div id="audioPlayer">
+      <button id="playButton" class="play">▶︎</button>
+      <button id="pauseButton" class="play" style="display: none">❚❚</button>
+      <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.2"
+        title="Control de volumen"
+      />
+    </div>
+
+    <audio id="myAudio" controls autoplay>
+      <source src="./assets/quinceMartha.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Modal -->
+    <div class="modal" id="modalConfirmacion">
+      <div class="modal-contenido">
+        <p>¿Confirmar?</p>
+        <button id="confirmButton" class="modal-button yes">Sí</button>
+        <button id="cancelButton" class="modal-button no">No</button>
+      </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

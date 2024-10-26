@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    color: #7e7f83;
+    position: relative;
+    overflow: auto;
+}
+
+.card-container {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+#audioPlayer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.play {
+    margin: 0 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+}
+
+#volumeControl {
+    width: 50px;
+}
+
+button {
+    margin: 0 5px;
+    cursor: pointer;
+    color: #7e7f83;
+}
+
+audio {
+    display: none;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    /* Ocultar el modal por defecto */
+    position: fixed;
+    /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: 100%;
+    /* Ocupa toda la altura */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo negro semi-transparente */
+    justify-content: center;
+    /* Centra el contenido */
+    align-items: center;
+    /* Centra el contenido */
+    z-index: 999;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.modal-contenido {
+    background-color: white;
+    /* Fondo blanco para el modal */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    /* Centra el texto */
+}
+
+.modal-button {
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #7e7f83;
+    /* Borde del botón */
+    border-radius: 5px;
+    background-color: transparent;
+    color: #7e7f83;
+    /* Color del texto */
+}
+
+.modal-button.yes {
+    background-color: #f0f8ff;
+    /* Color del botón "Sí" */
+}
+
+.modal-button.no {
+    background-color: #f9d5e1;
+    /* Color del botón "No" */
+}
