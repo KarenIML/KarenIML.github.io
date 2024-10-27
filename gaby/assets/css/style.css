@@ -168,7 +168,8 @@ audio {
 @media (max-width: 720px) {
     .confirm-button {
         font-size: 9px;
-        padding: 2px 10px;
+        padding: 5px 10px;
+        bottom: 12%;
     }
 
     .button-icon {
