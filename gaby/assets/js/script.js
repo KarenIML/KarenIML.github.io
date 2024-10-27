@@ -1,22 +1,3 @@
-// function handleImageClick(event) {
-//   //x: 134 - y: 649
-//   //x: 150 - y: 663
-
-//   //x: 274 - y: 695
-//   //x: 295 - y: 713
-//   const x =
-//     event.offsetX ||
-//     (event.touches && event.touches[0].pageX - event.target.offsetLeft);
-//   const y =
-//     event.offsetY ||
-//     (event.touches && event.touches[0].pageY - event.target.offsetTop);
-
-//   console.log(`x: ${x} - y: ${y}`);
-// }
-
-// tarjeta.addEventListener('click', handleImageClick);
-// tarjeta.addEventListener('touchstart', handleImageClick);
-
 // Audio
 var audio = document.getElementById('myAudio');
 var playButton = document.getElementById('playButton');
@@ -24,7 +5,7 @@ var pauseButton = document.getElementById('pauseButton');
 var volumeControl = document.getElementById('volumeControl');
 
 // Ajustar el volumen del audio
-audio.volume = 0.2;
+audio.volume = 0.7;
 
 // Eventos de reproducción
 playButton.addEventListener('click', function () {
@@ -47,16 +28,13 @@ volumeControl.addEventListener('input', function () {
 });
 
 // Modal
-// Obtén el modal y los botones
 const modal = document.getElementById('modalConfirmacion');
+const modalMapa = document.getElementById('modalMapa');
+
 const confirmButton = document.getElementById('confirmButton');
 const cancelButton = document.getElementById('cancelButton');
 
-// Función para mostrar el modal
 function mostrarModal(event) {
-  console.log('hola');
-  //   const x = event.clientX;
-  //   const y = event.clientY;
   const x =
     event.offsetX ||
     (event.touches && event.touches[0].pageX - event.target.offsetLeft);
@@ -65,30 +43,56 @@ function mostrarModal(event) {
     (event.touches && event.touches[0].pageY - event.target.offsetTop);
   console.log(`x: ${x} - y: ${y}`);
 
-  // Coordenadas específicas
   const x1 = 300,
-    y1 = 600;
+    y1 = 800;
   const x2 = 360,
-    y2 = 652;
+    y2 = 870;
   console.log(x >= x1 && x <= x2 && y >= y1 && y <= y2);
-  // Verifica si el clic está dentro de las coordenadas específicas
   if (x >= x1 && x <= x2 && y >= y1 && y <= y2) {
-    modal.style.display = 'flex'; // Muestra el modal
+    modal.style.display = 'flex';
+  }
+
+  const x3 = 152,
+    y3 = 753;
+  const x4 = 177,
+    y4 = 870;
+  console.log(x >= x3 && x <= x4 && y >= y3 && y <= y4);
+  if (x >= x3 && x <= x4 && y >= y3 && y <= y4) {
+    modalMapa.style.display = 'flex';
   }
 }
 
-// Función para cerrar el modal
 function cerrarModal() {
-  modal.style.display = 'none'; // Oculta el modal
+  modal.style.display = 'none';
 }
 
-// Agrega un evento de clic a la imagen
 document.getElementById('tarjeta').addEventListener('click', mostrarModal);
 
-// Agrega eventos para los botones del modal
 confirmButton.addEventListener('click', () => {
-  alert('Confirmado');
-  cerrarModal(); // Cierra el modal
+  window.open(
+    'https://docs.google.com/forms/d/e/1FAIpQLScZai_UhYkSYJCC47-2-a5zltiIMUXi60_kjBZLKaj5Do2mXg/viewform',
+    '_blank'
+  );
+  cerrarModal();
 });
 
-cancelButton.addEventListener('click', cerrarModal); // Cierra el modal al hacer clic en 'No'
+cancelButton.addEventListener('click', cerrarModal);
+
+const closeModalButton = document.getElementById('closeModalButton');
+closeModalButton.addEventListener('click', cerrarModal);
+
+function cerrarMapModal() {
+  modalMapa.style.display = 'none';
+}
+
+const closeMapModalButton = document.getElementById('closeMapModalButton');
+closeMapModalButton.addEventListener('click', cerrarMapModal);
+
+function cerrarMapModal() {
+  modal.style.display = 'flex';
+}
+
+const confirmAttendanceButton = document.getElementById(
+  'confirmAttendanceButton'
+);
+confirmAttendanceButton.addEventListener('click', cerrarMapModal);

@@ -28,6 +28,14 @@
         class="card-image"
         id="tarjeta"
       />
+      <button id="confirmAttendanceButton" class="confirm-button">
+        <img
+          src="./assets/images/confirm.png"
+          alt="Icono de confirmación"
+          class="button-icon"
+        />
+        Confirmar asistencia
+      </button>
     </div>
 
     <div id="audioPlayer">
@@ -51,9 +59,26 @@
     <!-- Modal -->
     <div class="modal" id="modalConfirmacion">
       <div class="modal-contenido">
+        <button class="modal-close" id="closeModalButton">✖</button>
         <p>¿Confirmar?</p>
-        <button id="confirmButton" class="modal-button yes">Sí</button>
         <button id="cancelButton" class="modal-button no">No</button>
+        <button id="confirmButton" class="modal-button yes">Sí</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modalMapa">
+      <div class="modal-contenido">
+        <button class="modal-close" id="closeMapModalButton">✖</button>
+        <p>¿Cómo llegar?</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3959.096630126971!2d-73.1156734!3d7.1147999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fddc3e2ce77%3A0xdf561dc65c779b3d!2sCoordieventos!5e0!3m2!1ses-419!2sco!4v1729916375558!5m2!1ses-419!2sco"
+          width="400"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
 

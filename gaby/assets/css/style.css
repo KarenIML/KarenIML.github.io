@@ -20,6 +20,9 @@ body {
     color: #7e7f83;
     position: relative;
     overflow: auto;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .card-container {
@@ -28,6 +31,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
+    position: relative;
+}
+
+.confirm-button {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 7px 20px;
+    background-color: #ccc1e96b;
+    border: 1px solid #3d2877c9;
+    color: #7e7f83;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.button-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.confirm-button:hover {
+    background-color: #c6d7f3;
+    color: white;
 }
 
 .card-image {
@@ -35,6 +68,7 @@ body {
     max-width: 600px;
     height: auto;
     object-fit: contain;
+    margin-top: 0;
 }
 
 #audioPlayer {
@@ -73,55 +107,60 @@ audio {
     display: none;
 }
 
-/* Estilos del Modal */
 .modal {
     display: none;
-    /* Ocultar el modal por defecto */
     position: fixed;
-    /* Fijo en la pantalla */
     top: 0;
     left: 0;
     width: 100%;
-    /* Ocupa todo el ancho */
     height: 100%;
-    /* Ocupa toda la altura */
     background-color: rgba(0, 0, 0, 0.8);
-    /* Fondo negro semi-transparente */
     justify-content: center;
-    /* Centra el contenido */
     align-items: center;
-    /* Centra el contenido */
     z-index: 999;
-    /* Asegura que esté por encima de otros elementos */
 }
 
 .modal-contenido {
     background-color: white;
-    /* Fondo blanco para el modal */
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    /* Centra el texto */
+    position: relative;
+}
+
+.modal-contenido p {
+    margin-bottom: 10px;
 }
 
 .modal-button {
     margin: 0 5px;
     cursor: pointer;
     padding: 10px 15px;
-    border: 2px solid #7e7f83;
-    /* Borde del botón */
     border-radius: 5px;
     background-color: transparent;
-    color: #7e7f83;
-    /* Color del texto */
+    color: #605e5f;
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .modal-button.yes {
     background-color: #f0f8ff;
-    /* Color del botón "Sí" */
+    border: 1px solid #0f1b45;
 }
 
 .modal-button.no {
     background-color: #f9d5e1;
-    /* Color del botón "No" */
+    border: 1px solid #8c4a6e;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #7e7f83;
+    background: none;
+    border: none;
 }
