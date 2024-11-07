@@ -34,40 +34,6 @@ const modalMapa = document.getElementById('modalMapa');
 const confirmButton = document.getElementById('confirmButton');
 const cancelButton = document.getElementById('cancelButton');
 
-function mostrarModal(event) {
-  const x =
-    event.offsetX ||
-    (event.touches && event.touches[0].pageX - event.target.offsetLeft);
-  const y =
-    event.offsetY ||
-    (event.touches && event.touches[0].pageY - event.target.offsetTop);
-  console.log(`x: ${x} - y: ${y}`);
-
-  const x1 = 300,
-    y1 = 800;
-  const x2 = 360,
-    y2 = 870;
-  console.log(x >= x1 && x <= x2 && y >= y1 && y <= y2);
-  if (x >= x1 && x <= x2 && y >= y1 && y <= y2) {
-    modal.style.display = 'flex';
-  }
-
-  const x3 = 152,
-    y3 = 753;
-  const x4 = 177,
-    y4 = 870;
-  console.log(x >= x3 && x <= x4 && y >= y3 && y <= y4);
-  if (x >= x3 && x <= x4 && y >= y3 && y <= y4) {
-    modalMapa.style.display = 'flex';
-  }
-}
-
-function cerrarModal() {
-  modal.style.display = 'none';
-}
-
-document.getElementById('tarjeta').addEventListener('click', mostrarModal);
-
 confirmButton.addEventListener('click', () => {
   window.open(
     'https://docs.google.com/forms/d/e/1FAIpQLScZai_UhYkSYJCC47-2-a5zltiIMUXi60_kjBZLKaj5Do2mXg/viewform',
@@ -81,18 +47,29 @@ cancelButton.addEventListener('click', cerrarModal);
 const closeModalButton = document.getElementById('closeModalButton');
 closeModalButton.addEventListener('click', cerrarModal);
 
-function cerrarMapModal() {
-  modalMapa.style.display = 'none';
+function cerrarModal() {
+  modal.style.display = 'none';
 }
 
-const closeMapModalButton = document.getElementById('closeMapModalButton');
-closeMapModalButton.addEventListener('click', cerrarMapModal);
-
-function cerrarMapModal() {
+function abrirModal() {
   modal.style.display = 'flex';
 }
 
 const confirmAttendanceButton = document.getElementById(
   'confirmAttendanceButton'
 );
-confirmAttendanceButton.addEventListener('click', cerrarMapModal);
+confirmAttendanceButton.addEventListener('click', abrirModal);
+
+const locationButton = document.getElementById('locationButton');
+locationButton.addEventListener('click', abrirMapModal);
+
+const closeMapModalButton = document.getElementById('closeMapModalButton');
+closeMapModalButton.addEventListener('click', cerrarMapModal);
+
+function abrirMapModal() {
+  modalMapa.style.display = 'flex';
+}
+
+function cerrarMapModal() {
+  modalMapa.style.display = 'none';
+}

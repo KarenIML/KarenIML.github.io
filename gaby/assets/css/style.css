@@ -35,9 +35,26 @@ body {
     position: relative;
 }
 
+.location-button {
+    position: absolute;
+    bottom: 16%;
+    left: 24%;
+    transform: translateX(-50%);
+    padding: 4px 10px;
+    background-color: transparent;
+    border: none;
+    color: #7e7f83;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
 .confirm-button {
     position: absolute;
-    bottom: 10%;
+    bottom: 11%;
     left: 50%;
     transform: translateX(-50%);
     padding: 4px 10px;
