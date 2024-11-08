@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/butterfly.png" type="image/x-icon" />
+    <title>Mis Quince</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Mis quince años" />
+    <meta property="og:description" content="Invitación" />
+    <meta
+      property="og:image"
+      content="https://kareniml.github.io/gaby/assets/images/invitation.jpg"
+    />
+    <meta property="og:url" content="https://kareniml.github.io/gaby/" />
+  </head>
+  <body>
+    <div class="card-container">
+      <img
+        src="./assets/images/missing.jpg"
+        alt="Tarjeta"
+        class="card-image"
+        id="tarjeta"
+      />
+
+      <div class="container">
+        <div class="butterfly">
+          <div class="body f-part"></div>
+          <div class="l-wing f-part"></div>
+          <div class="r-wing f-part"></div>
+        </div>
+      </div>
+
+      <div class="countdown-container">
+        <p class="countdown-title">Faltan</p>
+        <div class="countdown">
+          <span class="days">00</span>días: <span class="hours">00</span>horas:
+          <span class="minutes">00</span>min: <span class="seconds">00</span>seg
+        </div>
+      </div>
+
+      <button id="confirmAttendanceButton" class="confirm-button">
+        <img
+          src="./assets/images/confirm.png"
+          alt="Icono de confirmación"
+          class="button-icon"
+        />
+        <span>Confirmar asistencia</span>
+      </button>
+
+      <button id="invitationButton" class="invitation-button">
+        <img
+          src="./assets/images/invitation.png"
+          alt="Icono de invitacion"
+          class="button-icon"
+        />
+        <span>Ver invitation</span>
+      </button>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

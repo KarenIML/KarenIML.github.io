@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    color: #7e7f83;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.card-container {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Butterfly */
+.container {
+    width: 134px;
+    height: 100px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    perspective: 600px;
+}
+
+.butterfly {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotate3d(2, 1, -1, 45deg);
+}
+
+.f-part {
+    position: absolute;
+    background-size: 100% 100%;
+}
+
+.butterfly .body {
+    width: 20%;
+    height: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 15%;
+    background-image: url(bod2.png);
+    background-size: cover;
+}
+
+.butterfly .l-wing {
+    width: 50%;
+    height: 100%;
+    left: 0px;
+    animation: lwingAnimate 1s ease-in-out infinite;
+    transform-origin: right;
+    background-image: url(lw2.png);
+    background-size: cover;
+}
+
+.butterfly .r-wing {
+    width: 50%;
+    height: 100%;
+    right: -2px;
+    animation: rwingAnimate 1s ease-in-out infinite;
+    transform-origin: left;
+    background-image: url(rw2.png);
+    background-size: cover;
+}
+
+.butterfly .r-wing.wing-w1 {
+    right: 7px;
+}
+
+@keyframes lwingAnimate {
+    0% {
+        transform: rotate3d(0, 1, 0, 80deg);
+    }
+
+    50% {
+        transform: rotate3d(0, 1, 0, 20deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, 80deg);
+    }
+}
+
+@keyframes rwingAnimate {
+    0% {
+        transform: rotate3d(0, 1, 0, -80deg);
+    }
+
+    50% {
+        transform: rotate3d(0, 1, 0, -20deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, -80deg);
+    }
+}
+
+.countdown-container {
+    position: absolute;
+    top: 38%;
+    left: 60%;
+    /* Ajusta según la posición deseada */
+    transform: translate(-18%, -50%);
+    text-align: center;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 1.5em;
+}
+
+.countdown-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.countdown {
+    font-size: 0.6rem;
+    display: flex;
+    gap: 4px;
+}
+
+.confirm-button {
+    position: absolute;
+    left: 60%;
+    transform: translateX(-10%);
+    padding: 3px 4px;
+    background-color: #ccc1e96b;
+    border: 1px solid #3d2877c9;
+    color: #7e7f83;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 1.5s ease, border-color 1.5s ease;
+    animation: colorPulse 3s infinite alternate;
+    font-size: 0.6rem;
+}
+
+.invitation-button {
+    position: absolute;
+    bottom: 36%;
+    left: 60%;
+    transform: translateX(-50%);
+    padding: 4px 4px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid #3d2877c9;
+    color: #7e7f83;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    box-shadow: 0 0 5px rgba(61, 40, 119, 0.4);
+    animation: subtle-pulse 2.5s ease-in-out infinite;
+    font-size: 0.6rem;
+}
+
+@keyframes subtle-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(61, 40, 119, 0.4), 0 0 10px rgba(61, 40, 119, 0.3);
+    }
+
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 8px rgba(61, 40, 119, 0.5), 0 0 12px rgba(61, 40, 119, 0.4);
+    }
+}
+
+.confirm-button:hover {
+    background-color: #c6d7f3;
+    color: white;
+}
+
+.button-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+@keyframes colorPulse {
+
+    0%,
+    100% {
+        background-color: #ccc1e96b;
+        border-color: #3d2877c9;
+    }
+
+    50% {
+        background-color: #9ec2fe9e;
+        border-color: #9ec2fe;
+    }
+}
