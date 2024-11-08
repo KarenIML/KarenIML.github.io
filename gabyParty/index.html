@@ -12,15 +12,32 @@
       href="https://fonts.googleapis.com/css2?family=Birthstone&family=Nanum+Gothic&display=swap"
       rel="stylesheet"
     />
-    <meta property="og:title" content="Mis quince años" />
+    <meta property="og:title" content="Falta poco" />
     <meta property="og:description" content="Invitación" />
     <meta
       property="og:image"
-      content="https://kareniml.github.io/gabyParty/assets/images/missing.jpg"
+      content="https://kareniml.github.io/gabyParty/assets/images/missingFew.jpg"
     />
     <meta property="og:url" content="https://kareniml.github.io/gaby/" />
   </head>
   <body>
+    <div id="audioPlayer">
+      <button id="playButton" class="play">▶︎</button>
+      <button id="pauseButton" class="play" style="display: none">❚❚</button>
+      <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.2"
+        title="Control de volumen"
+      />
+    </div>
+
+    <audio id="myAudio" controls autoplay>
+      <source src="./assets/blackpink.mp3" type="audio/mpeg" />
+    </audio>
     <div class="card-container">
       <img
         src="./assets/images/missing.jpg"

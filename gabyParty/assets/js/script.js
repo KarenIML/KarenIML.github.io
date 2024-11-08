@@ -79,3 +79,28 @@ function abrirInvitation() {
 
 const invitationButton = document.getElementById('invitationButton');
 invitationButton.addEventListener('click', abrirInvitation);
+
+// Audio
+const audio = document.getElementById('myAudio');
+const playButton = document.getElementById('playButton');
+const pauseButton = document.getElementById('pauseButton');
+const volumeControl = document.getElementById('volumeControl');
+
+// Play audio
+playButton.addEventListener('click', () => {
+  audio.play();
+  playButton.style.display = 'none';
+  pauseButton.style.display = 'inline';
+});
+
+// Pause audio
+pauseButton.addEventListener('click', () => {
+  audio.pause();
+  pauseButton.style.display = 'none';
+  playButton.style.display = 'inline';
+});
+
+// Volume control
+volumeControl.addEventListener('input', (e) => {
+  audio.volume = e.target.value;
+});

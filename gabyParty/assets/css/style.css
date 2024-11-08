@@ -226,3 +226,42 @@ body {
         border-color: #9ec2fe;
     }
 }
+
+/* Audio */
+
+
+#audioPlayer {
+    position: fixed;
+    bottom: 94px;
+    right: 25%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.play {
+    margin: 0 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+}
+
+#volumeControl {
+    width: 50px;
+}
+
+button {
+    margin: 0 5px;
+    cursor: pointer;
+    color: #7e7f83;
+}
+
+audio {
+    display: none;
+}
